@@ -1,0 +1,27 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "Project StreeBog",
+  "type": "module",
+  "main": "index.ts",
+  "scripts": {
+    "test": "node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/va1et/Big_PP2.git"
+  },
+  "keywords": [
+    "StreeBog",
+    "hash-function"
+  ],
+  "author": "Philipp Zinoviev <mr.zinoviev007@mail.ru>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/va1et/Big_PP2/issues"
+  },
+  "homepage": "https://github.com/va1et/Big_PP2#readme",
+  "dependencies": {
+    "typescript": "^4.2.2"
+  }
+}
