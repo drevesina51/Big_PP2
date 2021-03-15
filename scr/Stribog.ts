@@ -175,7 +175,7 @@ C = [
      //TODO Сделать считывание с файла
     getHashArray(message,outputMode) {
         
-        return this.generateHash(message,outputMode);
+        return this.generateHash(message,outputMode)
     }
 /*getHash(file,outputMode)
     {        
@@ -250,11 +250,11 @@ C = [
                 inc++
             }
 
-            this.N = this.addModule(this.N, NMessage);
-            this.sigma = this.addModule(this.sigma, messagePart);
+            this.N = this.addModule(this.N, NMessage)
+            this.sigma = this.addModule(this.sigma, messagePart)
 
-            this.h = this.compression(this.N0, this.N, this.h);
-            this.h = this.compression(this.N0, this.sigma, this.h);
+            this.h = this.compression(this.N0, this.N, this.h)
+            this.h = this.compression(this.N0, this.sigma, this.h)
         }
     }
     generateHash(message,outputMode)
@@ -266,9 +266,9 @@ C = [
         {
             inc++;
             var tmp = message.slice(message.length - 64*(inc), message.length - (inc-1)*64)// Не уверен что правтльно отрезает
-            this.h = this.compression(this.N, tmp, this.h);
-            this.N = this.addModule(this.N, this.N512);
-            this.sigma = this.addModule(this.sigma, tmp);
+            this.h = this.compression(this.N, tmp, this.h)
+            this.N = this.addModule(this.N, this.N512)
+            this.sigma = this.addModule(this.sigma, tmp)
             length -=512;
         }
         
@@ -281,12 +281,12 @@ C = [
             tmpMessage[64 - message.length - 1] = 0x01
             
             for(let i = 64 - message.length; i < 64; i++)
-                tmpMessage[i] = message[i + message.length - 64];
+                tmpMessage[i] = message[i + message.length - 64]
             
             message = tmpMessage;
         }
             
-        this.h = this.compression(this.N, message, this.h);
+        this.h = this.compression(this.N, message, this.h)
         
         var NMessage = [64]
         NMessage.fill(0x00,0,64)
@@ -299,11 +299,11 @@ C = [
             inc++;
         }
         
-        this.N = this.addModule(this.N, NMessage);
-        this.sigma = this.addModule(this.sigma, message);
+        this.N = this.addModule(this.N, NMessage)
+        this.sigma = this.addModule(this.sigma, message)
 
-        this.h = this.compression(this.N0, this.N, this.h);
-        this.h = this.compression(this.N0, this.sigma, this.h);
+        this.h = this.compression(this.N0, this.N, this.h)
+        this.h = this.compression(this.N0, this.sigma, this.h)
         
         if(outputMode)
             return this.h;
@@ -374,9 +374,9 @@ Etransformation(k,m){
 Keyshedule(K,i){
 
     K=this.xor(K,this.C[i])
-    K = this.Stransformation(K);
-    K = this.Ptransformation(K);
-    K = this.Ltransformation(K);
+    K = this.Stransformation(K)
+    K = this.Ptransformation(K)
+    K = this.Ltransformation(K)
     
     return K;
 
@@ -390,7 +390,7 @@ Stransformation(a)
         let result
         
         for(var i = 0; i < 64; i++)
-            result[i] = this.Pi[(a[i] & 0xFF)];
+            result[i] = this.Pi[(a[i] & 0xFF)]
         
         return result;
     }
@@ -405,7 +405,7 @@ Ptransformation(a)
         let result
         
         for(var i = 0; i < 64; i++)
-            result[i] = a[this.Tau[i]];
+            result[i] = a[this.Tau[i]]
         
         return result;
     }
@@ -423,90 +423,89 @@ Ltransformation(a)
                 if((a[i*8+k] & (0x80)) != 0)
                 {
                     result[8*i] ^= this.A[k*8+0][0];
-                    result[8*i+1] ^= this.A[k*8+0][1];
-                    result[8*i+2] ^= this.A[k*8+0][2];
-                    result[8*i+3] ^= this.A[k*8+0][3];
-                    result[8*i+4] ^= this.A[k*8+0][4];
-                    result[8*i+5] ^= this.A[k*8+0][5];
-                    result[8*i+6] ^= this.A[k*8+0][6];
-                    result[8*i+7] ^= this.A[k*8+0][7];
+                    result[8*i+1] ^= this.A[k*8+0][1]
+                    result[8*i+2] ^= this.A[k*8+0][2]
+                    result[8*i+3] ^= this.A[k*8+0][3]
+                    result[8*i+4] ^= this.A[k*8+0][4]
+                    result[8*i+5] ^= this.A[k*8+0][5]
+                    result[8*i+6] ^= this.A[k*8+0][6]
+                    result[8*i+7] ^= this.A[k*8+0][7]
                 }
                 if((a[i*8+k] & (0x40)) != 0)
                     {
                     result[8*i] ^= this.A[k*8+1][0];
-                    result[8*i+1] ^= this.A[k*8+1][1];
-                    result[8*i+2] ^= this.A[k*8+1][2];
-                    result[8*i+3] ^= this.A[k*8+1][3];
-                    result[8*i+4] ^= this.A[k*8+1][4];
-                    result[8*i+5] ^= this.A[k*8+1][5];
-                    result[8*i+6] ^= this.A[k*8+1][6];
-                    result[8*i+7] ^= this.A[k*8+1][7];
+                    result[8*i+1] ^= this.A[k*8+1][1]
+                    result[8*i+2] ^= this.A[k*8+1][2]
+                    result[8*i+3] ^= this.A[k*8+1][3]
+                    result[8*i+4] ^= this.A[k*8+1][4]
+                    result[8*i+5] ^= this.A[k*8+1][5]
+                    result[8*i+6] ^= this.A[k*8+1][6]
+                    result[8*i+7] ^= this.A[k*8+1][7]
                 }
                 if((a[i*8+k] & (0x20)) != 0)
                     {
                     result[8*i] ^= this.A[k*8+2][0];
-                    result[8*i+1] ^= this.A[k*8+2][1];
-                    result[8*i+2] ^= this.A[k*8+2][2];
-                    result[8*i+3] ^= this.A[k*8+2][3];
-                    result[8*i+4] ^= this.A[k*8+2][4];
-                    result[8*i+5] ^= this.A[k*8+2][5];
-                    result[8*i+6] ^= this.A[k*8+2][6];
-                    result[8*i+7] ^= this.A[k*8+2][7];
+                    result[8*i+1] ^= this.A[k*8+2][1]
+                    result[8*i+2] ^= this.A[k*8+2][2]
+                    result[8*i+4] ^= this.A[k*8+2][4]
+                    result[8*i+5] ^= this.A[k*8+2][5]
+                    result[8*i+6] ^= this.A[k*8+2][6]
+                    result[8*i+7] ^= this.A[k*8+2][7]
                 }
                 if((a[i*8+k] & (0x10)) != 0)
                     {
-                    result[8*i] ^= this.A[k*8+3][0];
-                    result[8*i+1] ^= this.A[k*8+3][1];
-                    result[8*i+2] ^= this.A[k*8+3][2];
-                    result[8*i+3] ^= this.A[k*8+3][3];
-                    result[8*i+4] ^= this.A[k*8+3][4];
-                    result[8*i+5] ^= this.A[k*8+3][5];
-                    result[8*i+6] ^= this.A[k*8+3][6];
-                    result[8*i+7] ^= this.A[k*8+3][7];
+                    result[8*i] ^= this.A[k*8+3][0]
+                    result[8*i+1] ^= this.A[k*8+3][1]
+                    result[8*i+2] ^= this.A[k*8+3][2]
+                    result[8*i+3] ^= this.A[k*8+3][3]
+                    result[8*i+4] ^= this.A[k*8+3][4]
+                    result[8*i+5] ^= this.A[k*8+3][5]
+                    result[8*i+6] ^= this.A[k*8+3][6]
+                    result[8*i+7] ^= this.A[k*8+3][7]
                 }
                 if((a[i*8+k] & (0x8)) != 0)
                     {
                     result[8*i] ^= this.A[k*8+4][0];
-                    result[8*i+1] ^= this.A[k*8+4][1];
-                    result[8*i+2] ^= this.A[k*8+4][2];
-                    result[8*i+3] ^= this.A[k*8+4][3];
-                    result[8*i+4] ^= this.A[k*8+4][4];
-                    result[8*i+5] ^= this.A[k*8+4][5];
-                    result[8*i+6] ^= this.A[k*8+4][6];
-                    result[8*i+7] ^= this.A[k*8+4][7];
+                    result[8*i+1] ^= this.A[k*8+4][1]
+                    result[8*i+2] ^= this.A[k*8+4][2]
+                    result[8*i+3] ^= this.A[k*8+4][3]
+                    result[8*i+4] ^= this.A[k*8+4][4]
+                    result[8*i+5] ^= this.A[k*8+4][5]
+                    result[8*i+6] ^= this.A[k*8+4][6]
+                    result[8*i+7] ^= this.A[k*8+4][7]
                 }
                 if((a[i*8+k] & (0x4)) != 0)
                     {
                     result[8*i] ^= this.A[k*8+5][0];
-                    result[8*i+1] ^= this.A[k*8+5][1];
-                    result[8*i+2] ^= this.A[k*8+5][2];
-                    result[8*i+3] ^= this.A[k*8+5][3];
-                    result[8*i+4] ^= this.A[k*8+5][4];
-                    result[8*i+5] ^= this.A[k*8+5][5];
-                    result[8*i+6] ^= this.A[k*8+5][6];
-                    result[8*i+7] ^= this.A[k*8+5][7];
+                    result[8*i+1] ^= this.A[k*8+5][1]
+                    result[8*i+2] ^= this.A[k*8+5][2]
+                    result[8*i+3] ^= this.A[k*8+5][3]
+                    result[8*i+4] ^= this.A[k*8+5][4]
+                    result[8*i+5] ^= this.A[k*8+5][5]
+                    result[8*i+6] ^= this.A[k*8+5][6]
+                    result[8*i+7] ^= this.A[k*8+5][7]
                 }
                 if((a[i*8+k] & (0x2)) != 0)
                     {
                     result[8*i] ^= this.A[k*8+6][0];
-                    result[8*i+1] ^= this.A[k*8+6][1];
-                    result[8*i+2] ^= this.A[k*8+6][2];
-                    result[8*i+3] ^= this.A[k*8+6][3];
-                    result[8*i+4] ^= this.A[k*8+6][4];
-                    result[8*i+5] ^= this.A[k*8+6][5];
-                    result[8*i+6] ^= this.A[k*8+6][6];
-                    result[8*i+7] ^= this.A[k*8+6][7];
+                    result[8*i+1] ^= this.A[k*8+6][1]
+                    result[8*i+2] ^= this.A[k*8+6][2]
+                    result[8*i+3] ^= this.A[k*8+6][3]
+                    result[8*i+4] ^= this.A[k*8+6][4]
+                    result[8*i+5] ^= this.A[k*8+6][5]
+                    result[8*i+6] ^= this.A[k*8+6][6]
+                    result[8*i+7] ^= this.A[k*8+6][7]
                 }
                 if((a[i*8+k] & (0x1)) != 0)
                     {
-                    result[8*i] ^= this.A[k*8+7][0];
-                    result[8*i+1] ^= this.A[k*8+7][1];
-                    result[8*i+2] ^= this.A[k*8+7][2];
-                    result[8*i+3] ^= this.A[k*8+7][3];
-                    result[8*i+4] ^= this.A[k*8+7][4];
-                    result[8*i+5] ^= this.A[k*8+7][5];
-                    result[8*i+6] ^= this.A[k*8+7][6];
-                    result[8*i+7] ^= this.A[k*8+7][7];
+                    result[8*i] ^= this.A[k*8+7][0]
+                    result[8*i+1] ^= this.A[k*8+7][1]
+                    result[8*i+2] ^= this.A[k*8+7][2]
+                    result[8*i+3] ^= this.A[k*8+7][3]
+                    result[8*i+4] ^= this.A[k*8+7][4]
+                    result[8*i+5] ^= this.A[k*8+7][5]
+                    result[8*i+6] ^= this.A[k*8+7][6]
+                    result[8*i+7] ^= this.A[k*8+7][7]
                 }
             }
         }
