@@ -13,8 +13,6 @@ nodejs platforms.
 
 ***NRNU MEPhI students*** - Zinoviev Philip, Samorodov Roman
 
-***Scientific supervisor*** - Zubavlenko Vladimir
-
 ## Description
 
 **"Stribog"** is a cryptographic algorithm for calculating a hash function with an input data block size of 512 bits and a hash code size of 256 or 512 bits.
