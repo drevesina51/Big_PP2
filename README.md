@@ -1,8 +1,8 @@
-# GOST 34.11-2018 "Stribog"
+# GOST 34.11-2018 "Streebog"
 
 ## Goal:
 
-Development of a module that implements **GOST 34.11-2018 "Stribog"** for
+Development of a module that implements **GOST 34.11-2018 "Streebog"** for
 nodejs platforms.
 
 ![Node](https://github.com/drevesina51/images/blob/main/Node.js_logo.svg)
@@ -11,15 +11,15 @@ nodejs platforms.
 
 ![introduse](https://github.com/drevesina51/images/blob/main/Screenshot_1.png)
 
-***NRNU MEPhI students*** - Zinoviev Philip, Samorodov Roman
+***NRNU MEPhI students*** - Zinoviev Philipp, Samorodov Roman
 
 ## Description
 
-**"Stribog"** is a cryptographic algorithm for calculating a hash function with an input data block size of 512 bits and a hash code size of 256 or 512 bits.
+**"Streebog"** is a cryptographic algorithm for calculating a hash function with an input data block size of 512 bits and a hash code size of 256 or 512 bits.
 
 ![encryption](https://github.com/drevesina51/images/blob/main/ea998544329ec16cb9434c929cd44f5f.jpg)
 
-### Concepts for constructing the hash function "Stribog"
+### Concepts for constructing the hash function "Streebog"
 
 * The new hash function must not have properties that would allow known attacks to be applied;
 
