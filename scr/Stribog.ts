@@ -1,3 +1,4 @@
+import * as fs from "fs";
 class Stribog
 {
      h
@@ -214,6 +215,10 @@ C = [
      * Обрабатывает блок данных
      *  messagePart блок данных 512 бит или меньше
      */
+    getHash(message,outputMode){
+        
+        return this.generateHash(message,outputMode)
+    }
       hashPart(messagePart)
     {
         if(messagePart.length == 64)
