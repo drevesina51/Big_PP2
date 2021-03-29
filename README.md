@@ -30,7 +30,7 @@ nodejs platforms.
 * There should be no unnecessary transformations that complicate the construction of the hash function. Moreover, each transformation used in the hash function must be responsible for certain cryptographic properties.
 
 #### **The detailed operating principle can be found directly in [GOST](https://github.com/drevesina51/images/blob/main/1200095035.pdf)** 
-#### **npm i valetfuerte**
+#### To install: **npm i valetfuerte**
            
 ## Have a nice day!
 
