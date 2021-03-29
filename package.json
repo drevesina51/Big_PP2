@@ -2,6 +2,7 @@
   "name": "~valetfuerte",
   "version": "1.0.0",
   "description": "This project is made by mephi students",
+  "type":"module" ,
   "main": "Stribog.ts",
   "scripts": {
     "test": "nodepp"

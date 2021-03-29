@@ -1,5 +1,5 @@
-import * as fs from "fs";
-class Stribog
+
+export class Stribog
 {
      h
      N
@@ -216,7 +216,7 @@ C = [
      *  messagePart блок данных 512 бит или меньше
      */
     getHash(message,outputMode){
-        
+
         return this.generateHash(message,outputMode)
     }
       hashPart(messagePart)
@@ -518,5 +518,4 @@ Ltransformation(a)
     }   
 }
 //export{Stribog}
-var kekw= new Stribog(true)
-console.log("HI")
+
