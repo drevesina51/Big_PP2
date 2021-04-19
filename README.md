@@ -33,6 +33,10 @@ nodejs platforms.
 
 ### To install: 
 
+Streebog requires [Node.js](https://nodejs.org/) v10+ to run.
+
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)]()
+
 ```npm i valetfuerte```
 
 ### Testing
