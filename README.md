@@ -9,7 +9,7 @@ nodejs platforms.
 
 ![introduse](https://github.com/drevesina51/images/blob/main/Screenshot_1.png)
 
-***NRNU MEPhI students*** - Zinoviev Philipp (![va1et](https://github.com/va1et)), Samorodov Roman (![IRONy](https://github.com/drevesina51))
+***NRNU MEPhI students*** - Zinoviev Philipp ([va1et](https://github.com/va1et)), Samorodov Roman ([IRONy](https://github.com/drevesina51))
 
 ## Description
 
