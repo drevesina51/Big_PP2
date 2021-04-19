@@ -27,9 +27,10 @@ nodejs platforms.
 
 * There should be no unnecessary transformations that complicate the construction of the hash function. Moreover, each transformation used in the hash function must be responsible for certain cryptographic properties.
 
-## Usage
-
 ### **The detailed operating principle can be found directly in [GOST](https://github.com/drevesina51/images/blob/main/1200095035.pdf)** 
+
+## Usage
+![npm (scoped)](https://img.shields.io/npm/v/yalc.svg?maxAge=86400) [![Build Status](https://travis-ci.org/whitecolor/yalc.svg?branch=master)](https://travis-ci.org/whitecolor/yalc)
 
 ### To install: 
 
