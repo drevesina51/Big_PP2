@@ -30,7 +30,7 @@ nodejs platforms.
 ### **The detailed operating principle can be found directly in [GOST](https://github.com/drevesina51/images/blob/main/1200095035.pdf)** 
 
 ## Usage
-![npm (scoped)](https://img.shields.io/npm/v/yalc.svg?maxAge=86400) [![Build Status](https://travis-ci.org/whitecolor/yalc.svg?branch=master)](https://travis-ci.org/whitecolor/yalc)
+![https://docs.npmjs.com/cli/v7/commands/npm-install](https://img.shields.io/npm/v/yalc.svg?maxAge=86400)
 
 ### To install: 
 
