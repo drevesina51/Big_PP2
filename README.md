@@ -5,8 +5,6 @@
 Development of a module that implements **GOST 34.11-2018 "Streebog"** for
 nodejs platforms.
 
-![Node](https://github.com/drevesina51/images/blob/main/Node.js_logo.svg)
-
 ## Authorship:
 
 ![introduse](https://github.com/drevesina51/images/blob/main/Screenshot_1.png)
@@ -29,9 +27,27 @@ nodejs platforms.
 
 * There should be no unnecessary transformations that complicate the construction of the hash function. Moreover, each transformation used in the hash function must be responsible for certain cryptographic properties.
 
-#### **The detailed operating principle can be found directly in [GOST](https://github.com/drevesina51/images/blob/main/1200095035.pdf)** 
-#### To install: **npm i valetfuerte**
-           
-## Have a nice day!
+## Usage
+
+### **The detailed operating principle can be found directly in [GOST](https://github.com/drevesina51/images/blob/main/1200095035.pdf)** 
+
+### To install: 
+
+```npm i valetfuerte```
+
+### Testing
+
+```npm run test```
+
+![Test](https://github.com/drevesina51/images/blob/main/QVMna4NzxU0.jpg)
+
+## Contributing
+
+Something missing? Found a bug? - Create a pull request or an issue.
+[Github](https://github.com/va1et/Big_PP2)
 
 ![rick](https://github.com/drevesina51/images/blob/main/7b7F.gif)
+
+## License
+
+This software is released under [MIT License](http://www.opensource.org/licenses/mit-license.php)
